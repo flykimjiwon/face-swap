@@ -10,7 +10,11 @@ const nextConfig = {
     // 환경 변수 설정
     env: {
       API_KEY: process.env.API_KEY,
-    }
+    },
+    webpack: (config) => {
+      config.resolve.fallback = { fs: false, encoding: false };
+      return config;
+    },
   }
   
   export default nextConfig;

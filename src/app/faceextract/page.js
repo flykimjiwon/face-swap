@@ -2,6 +2,7 @@
 import { useState, useEffect, useRef } from 'react';
 import * as faceapi from 'face-api.js';
 
+
 const FaceExtraction = () => {
   const [uploadedImage, setUploadedImage] = useState(null);
   const [extractedFaces, setExtractedFaces] = useState([]);
