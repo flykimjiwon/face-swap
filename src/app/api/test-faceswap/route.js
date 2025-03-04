@@ -7,11 +7,12 @@ export async function POST(req) {
     const response = await axios.post(
       'https://aifaceswap.io/api/aifaceswap/v1/multi_faceswap',
       {
-        source_image: "https://temp.aifaceswap.io/aifaceswap/static_img/1f153b1ab8d134f1eff57eb527467137.webp",
+        source_image: "https://monkeybear.kr/wp-content/uploads/2025/03/3.jpg",
         face_image: [
-          "https://temp.aifaceswap.io/aifaceswap/static_img/8a1bce5ea303791589165a5f607e7399.webp"
+          "https://temp.aifaceswap.io/aifaceswap/static_img/8a1bce5ea303791589165a5f607e7399.webp",
+          "https://temp.aifaceswap.io/aifaceswap/static_img/1f153b1ab8d134f1eff57eb527467137.webp"
         ],
-        index: [0],
+        index: [0,1],
         webhook: "https://face-webhook.vercel.app/api/task_callback"
       }
       ,
